@@ -2,8 +2,7 @@ import 'package:fix_my_ride/Common/widgets/custom_back_button.dart';
 import 'package:fix_my_ride/Common/widgets/custom_button.dart';
 import 'package:fix_my_ride/Common/widgets/custom_text.dart';
 import 'package:fix_my_ride/Common/widgets/custom_text_field.dart';
-import 'package:fix_my_ride/features/Authentication/View/Reset%20Password/reset_password.dart';
-import 'package:fix_my_ride/features/Authentication/View/Signup/sign_up_screen.dart';
+import 'package:fix_my_ride/features/Authentication/View/Signin/sign_in_screen.dart';
 import 'package:fix_my_ride/features/Authentication/View/Wellcome/wellcome_screen.dart';
 import 'package:fix_my_ride/utills/constants/images.dart';
 import 'package:fix_my_ride/utills/constants/size_box.dart';
@@ -11,13 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
 import 'package:get/get.dart';
 
-class SigninScreen extends StatelessWidget {
-  const SigninScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -44,10 +42,11 @@ class SigninScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Row(
-                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CustomText(
-                          text: 'SIGN IN',
+                          text: 'SIGN UP',
                           txtColor: AppColors.grey5,
                           fontFamily: 'Poppins',
                           fontSize: 24,
@@ -71,9 +70,16 @@ class SigninScreen extends StatelessWidget {
               child: Column(
                 children: [
                   CustomText(
-                    text: 'Please sign in to continue',
+                    text: 'Please signup to continue',
                     txtColor: AppColors.grey80,
                     fontSize: 18,
+                  ),
+                  const CustomSizedBox(
+                    height: 0.02,
+                  ),
+                  const CustomTextField(
+                    hintText: 'Name',
+                    prefixIcon: Icons.person,
                   ),
                   const CustomSizedBox(
                     height: 0.02,
@@ -92,26 +98,10 @@ class SigninScreen extends StatelessWidget {
                     suffixIcon: Icons.visibility_off,
                   ),
                   const CustomSizedBox(
-                    height: 0.02,
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.to(() => const ResetPassword());
-                      },
-                      child: CustomText(
-                        text: 'Forgot Password?',
-                        txtColor: AppColors.blue100,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  const CustomSizedBox(
                     height: 0.05,
                   ),
                   CustomButton(
-                    btnText: 'LOGIN',
+                    btnText: 'REGISTER',
                     ontap: () {},
                     btnColor: AppColors.blue100,
                     txtColor: Colors.white,
@@ -123,7 +113,7 @@ class SigninScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomText(
-                        text: "Don't have an account?",
+                        text: "Already have an account?",
                         txtColor: AppColors.grey80,
                         fontSize: 14,
                       ),
@@ -132,19 +122,19 @@ class SigninScreen extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(() => const SignupScreen());
+                          Get.to(() => const SigninScreen());
                         },
                         child: CustomText(
-                          text: "Register here",
+                          text: "SIGNIN",
                           txtColor: AppColors.blue100,
                           fontSize: 15,
                         ),
                       ),
                     ],
-                  ),
+                  )
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

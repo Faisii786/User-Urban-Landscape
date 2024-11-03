@@ -1,6 +1,7 @@
 import 'package:fix_my_ride/Common/widgets/custom_button.dart';
 import 'package:fix_my_ride/Common/widgets/custom_text.dart';
 import 'package:fix_my_ride/features/Authentication/View/Signin/sign_in_screen.dart';
+import 'package:fix_my_ride/features/Authentication/View/Signup/sign_up_screen.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
 import 'package:fix_my_ride/utills/constants/images.dart';
 import 'package:fix_my_ride/utills/constants/size_box.dart';
@@ -38,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
               isOutlined: true,
               btnText: 'LOG IN',
               ontap: () {
-                Get.to(() => SigninScreen());
+                Get.to(() => const SigninScreen());
               },
             ),
             const CustomSizedBox(
@@ -46,7 +47,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
             CustomButton(
               btnText: 'SIGN UP',
-              ontap: () {},
+              ontap: () {
+                Get.to(() => const SignupScreen());
+              },
               isOutlined: false,
             ),
             const CustomSizedBox(
