@@ -37,6 +37,7 @@ class CustomButton extends StatelessWidget {
             child: Text(
               btnText ?? 'LOG IN',
               style: TextStyle(
+                fontFamily: 'Poppins',
                 color: isOutlined
                     ? (btnColor ?? AppColors.blue100)
                     : (txtColor ?? AppColors.grey5),

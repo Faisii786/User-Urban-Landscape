@@ -6,6 +6,7 @@ class CustomText extends StatelessWidget {
   final Color? txtColor;
   final String? fontFamily;
   final double? fontSize;
+  final TextAlign? textAlign;
 
   const CustomText({
     super.key,
@@ -13,12 +14,14 @@ class CustomText extends StatelessWidget {
     this.txtColor,
     this.fontFamily,
     this.fontSize,
+    this.textAlign,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text ?? 'Welcome To Fix My Ride',
+      textAlign: textAlign,
       style: TextStyle(
         fontFamily: fontFamily ?? 'Poppins',
         fontSize: fontSize ?? 20,

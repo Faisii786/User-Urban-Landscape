@@ -1,4 +1,4 @@
-import 'package:fix_my_ride/features/Splash%20Screen/splash_screen.dart';
+import 'package:fix_my_ride/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,10 +7,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fix My Ride',
-      home: SplashScreen(),
+      home: BottomNavBar(),
     );
   }
 }

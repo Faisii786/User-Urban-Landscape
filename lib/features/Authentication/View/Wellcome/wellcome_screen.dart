@@ -1,5 +1,6 @@
 import 'package:fix_my_ride/Common/widgets/custom_button.dart';
 import 'package:fix_my_ride/Common/widgets/custom_text.dart';
+import 'package:fix_my_ride/bottom_nav_bar.dart';
 import 'package:fix_my_ride/features/Authentication/View/Signin/sign_in_screen.dart';
 import 'package:fix_my_ride/features/Authentication/View/Signup/sign_up_screen.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
@@ -14,18 +15,12 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: const CustomText(),
-      ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const CustomText(),
             const Spacer(),
             Image.asset(
               CustomImages.blueAppLogo,
@@ -53,10 +48,12 @@ class WelcomeScreen extends StatelessWidget {
               isOutlined: false,
             ),
             const CustomSizedBox(
-              height: 0.02,
+              height: 0.03,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => BottomNavBar());
+              },
               child: Text(
                 'SKIP FOR NOW',
                 style: TextStyle(
