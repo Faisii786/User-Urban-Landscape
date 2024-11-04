@@ -2,17 +2,20 @@ import 'package:fix_my_ride/features/Booking%20Screens/no_booking_screen.dart';
 import 'package:fix_my_ride/features/Dashboard%20Screens/dashboard_screen.dart';
 import 'package:fix_my_ride/features/Message%20Screens/chat_screen.dart';
 import 'package:fix_my_ride/features/More%20Screens/more_screen.dart';
+import 'package:fix_my_ride/features/Profile%20Screens/profile_screen.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:iconsax/iconsax.dart';
 
 class BottomNavBar extends StatelessWidget {
   final BottomNavController _controller = Get.put(BottomNavController());
 
   final List<Widget> _screens = [
+    const ProfileScreen(),
+    const NoBookingsScreen(),
     const DashboardScreen(),
-    const NoBookingsScreen(),
-    const NoBookingsScreen(),
     const ChatScreen(),
     const MoreScreen(),
   ];
@@ -30,60 +33,28 @@ class BottomNavBar extends StatelessWidget {
             ),
             child: _screens[_controller.selectedIndex.value],
           )),
-      bottomNavigationBar: Obx(
-        () => BottomNavigationBar(
-          selectedLabelStyle: const TextStyle(
-            fontFamily: 'Poppins',
-          ),
-          unselectedLabelStyle: const TextStyle(
-            fontFamily: 'Poppins',
-          ),
-          currentIndex: _controller.selectedIndex.value,
-          onTap: (index) => _controller.changeIndex(index),
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.blue100,
-          unselectedItemColor: AppColors.grey40,
-          showUnselectedLabels: true,
-          selectedFontSize: 14,
-          unselectedFontSize: 14,
-          elevation: 0,
-          items: [
-            buildNavItem(Icons.home, 'Home', 0),
-            buildNavItem(Icons.calendar_today, 'Appointments', 1),
-            buildNavItem(Icons.person, 'Profile', 2),
-            buildNavItem(Icons.message, 'Messages', 3),
-            buildNavItem(Icons.grid_view, 'More', 4),
-          ],
-        ),
-      ),
-    );
-  }
-
-  BottomNavigationBarItem buildNavItem(IconData icon, String label, int index) {
-    return BottomNavigationBarItem(
-      icon: Obx(() => _controller.selectedIndex.value == index
-          ? buildSelectedIcon(icon, isSelected: true)
-          : buildSelectedIcon(icon, isSelected: false)),
-      label: label,
-    );
-  }
-
-  Widget buildSelectedIcon(IconData icon, {bool isSelected = false}) {
-    return AnimatedScale(
-      scale: isSelected ? 0.9 : 0.9,
-      duration: const Duration(milliseconds: 200),
-      curve: Curves.easeInOut,
-      child: Icon(
-        icon,
-        color: isSelected ? AppColors.blue100 : AppColors.grey40,
-        size: 28,
+      bottomNavigationBar: ConvexAppBar(
+        height: 60,
+        backgroundColor: Colors.white,
+        color: AppColors.grey40,
+        activeColor: AppColors.blue100,
+        style: TabStyle.fixedCircle,
+        items: const [
+          TabItem(icon: Icons.person, title: 'Profile'),
+          TabItem(icon: Icons.calendar_month, title: 'Booking'),
+          TabItem(icon: Iconsax.main_component, title: ''),
+          TabItem(icon: Icons.message, title: 'Message'),
+          TabItem(icon: Icons.grid_view, title: 'More'),
+        ],
+        initialActiveIndex: _controller.selectedIndex.value,
+        onTap: (index) => _controller.changeIndex(index),
       ),
     );
   }
 }
 
 class BottomNavController extends GetxController {
-  var selectedIndex = 0.obs;
+  var selectedIndex = 2.obs;
 
   void changeIndex(int index) {
     selectedIndex.value = index;
