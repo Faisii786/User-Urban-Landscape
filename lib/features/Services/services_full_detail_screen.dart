@@ -63,7 +63,7 @@ class ServicesFullDetailsScreen extends StatelessWidget {
                     height: 0.02,
                   ),
                   const CustomText(
-                    text: 'د.إ 700',
+                    text: '700 \$',
                     txtColor: Colors.blue,
                     fontSize: 24,
                     textAlign: TextAlign.start,

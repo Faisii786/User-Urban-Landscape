@@ -106,7 +106,7 @@ Widget buildDetailServices(String title, String imagePath) {
             ),
             CustomText(
               textAlign: TextAlign.center,
-              text: '700',
+              text: '700 \$',
               fontSize: 15,
               txtColor: AppColors.grey80,
             ),

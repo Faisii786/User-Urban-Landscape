@@ -103,7 +103,7 @@ class ServiceDetailsSection extends StatelessWidget {
                             textAlign: TextAlign.start,
                           ),
                           CustomText(
-                            text: '700',
+                            text: '700 \$',
                             txtColor: Colors.blue,
                             fontSize: 20,
                             textAlign: TextAlign.end,
