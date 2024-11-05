@@ -27,7 +27,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(8),
                   child: Image.asset(
-                    CustomImages.whiteAppLogo,
+                    CustomImages.appLogo,
                     fit: BoxFit.contain,
                   ),
                 ),

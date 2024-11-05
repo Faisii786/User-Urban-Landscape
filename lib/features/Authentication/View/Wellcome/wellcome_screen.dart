@@ -23,9 +23,9 @@ class WelcomeScreen extends StatelessWidget {
             const CustomText(),
             const Spacer(),
             Image.asset(
-              CustomImages.blueAppLogo,
-              width: 200,
-              height: 200,
+              CustomImages.appLogo,
+              width: 150,
+              height: 150,
             ),
             const Spacer(
               flex: 2,

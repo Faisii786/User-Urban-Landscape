@@ -41,8 +41,8 @@ class ResetPassword extends StatelessWidget {
                     width: 0.04,
                   ),
                   Image.asset(
-                    CustomImages.whiteAppLogo,
-                    width: 80,
+                    CustomImages.appLogo,
+                    width: 60,
                     height: 80,
                   ),
                 ],
