@@ -13,7 +13,7 @@ class CheckoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();
@@ -227,7 +227,7 @@ class PaymentButtonsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      btnColor: AppColors.blue100,
+      btnColor: AppColors.appColor,
       btnText: 'Confirm Booking',
       txtColor: AppColors.grey100,
       isOutlined: true,

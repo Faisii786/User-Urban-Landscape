@@ -13,7 +13,7 @@ class QuestionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();
@@ -73,7 +73,7 @@ class QuestionsScreen extends StatelessWidget {
             ),
             const Spacer(),
             CustomButton(
-              btnColor: AppColors.blue100,
+              btnColor: AppColors.appColor,
               txtColor: AppColors.grey5,
               btnText: 'CONTINUE',
               ontap: () {

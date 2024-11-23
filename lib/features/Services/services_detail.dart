@@ -12,7 +12,7 @@ class ServicesDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();
@@ -38,29 +38,17 @@ class ServicesDetail extends StatelessWidget {
                 Get.to(() => const ServicesFullDetailsScreen());
               },
               child: buildDetailServices(
-                "Brake Repair",
-                "https://th.bing.com/th/id/R.a394d6121d4751d622ddc6a17427c150?rik=oEGFSPKg7xaBoQ&pid=ImgRaw&r=0",
+                "Urban Gardening",
+                "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               ),
             ),
             buildDetailServices(
-              "Computer Diagnostic",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Sustainable Landscaping",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
             ),
             buildDetailServices(
-              "Brake Repair",
-              "https://th.bing.com/th/id/R.a394d6121d4751d622ddc6a17427c150?rik=oEGFSPKg7xaBoQ&pid=ImgRaw&r=0",
-            ),
-            buildDetailServices(
-              "Computer Diagnostic",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
-            ),
-            buildDetailServices(
-              "Brake Repair",
-              "https://th.bing.com/th/id/R.a394d6121d4751d622ddc6a17427c150?rik=oEGFSPKg7xaBoQ&pid=ImgRaw&r=0",
-            ),
-            buildDetailServices(
-              "Computer Diagnostic",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Community Parks",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
             ),
           ],
         ),
@@ -115,7 +103,7 @@ Widget buildDetailServices(String title, String imagePath) {
             ),
             Container(
               decoration: BoxDecoration(
-                  color: AppColors.blue100,
+                  color: AppColors.appColor,
                   borderRadius: BorderRadius.circular(5)),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),

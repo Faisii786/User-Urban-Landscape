@@ -20,7 +20,7 @@ class ResetPassword extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColors.blue100,
+                color: AppColors.appColor,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60),
@@ -70,7 +70,7 @@ class ResetPassword extends StatelessWidget {
                   CustomButton(
                     btnText: 'Reset',
                     ontap: () {},
-                    btnColor: AppColors.blue100,
+                    btnColor: AppColors.appColor,
                     txtColor: Colors.white,
                   ),
                   const CustomSizedBox(
@@ -80,9 +80,9 @@ class ResetPassword extends StatelessWidget {
                     isOutlined: true,
                     btnText: 'GO TO SIGN IN',
                     ontap: () {
-                      Get.to(() => SigninScreen());
+                      Get.to(() => SignInScreen());
                     },
-                    btnColor: AppColors.blue100,
+                    btnColor: AppColors.appColor,
                     txtColor: Colors.white,
                   ),
                 ],

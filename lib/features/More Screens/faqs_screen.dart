@@ -9,7 +9,7 @@ class FAQScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();

@@ -4,7 +4,6 @@ import 'package:fix_my_ride/bottom_nav_bar.dart';
 import 'package:fix_my_ride/features/Authentication/View/Signin/sign_in_screen.dart';
 import 'package:fix_my_ride/features/Authentication/View/Signup/sign_up_screen.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
-import 'package:fix_my_ride/utills/constants/images.dart';
 import 'package:fix_my_ride/utills/constants/size_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,13 +19,15 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CustomText(),
-            const Spacer(),
-            Image.asset(
-              CustomImages.appLogo,
-              width: 150,
-              height: 150,
+            const CustomText(
+              textAlign: TextAlign.center,
             ),
+            const Spacer(),
+            // Image.asset(
+            //   CustomImages.appLogo,
+            //   width: 150,
+            //   height: 150,
+            // ),
             const Spacer(
               flex: 2,
             ),
@@ -34,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
               isOutlined: true,
               btnText: 'LOG IN',
               ontap: () {
-                Get.to(() => const SigninScreen());
+                Get.to(() => const SignInScreen());
               },
             ),
             const CustomSizedBox(
@@ -57,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Text(
                 'SKIP FOR NOW',
                 style: TextStyle(
-                    color: AppColors.blue100,
+                    color: AppColors.appColor,
                     fontSize: 14,
                     fontFamily: 'Poppins'),
               ),

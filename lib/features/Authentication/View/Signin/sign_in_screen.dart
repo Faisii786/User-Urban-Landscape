@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
 import 'package:get/get.dart';
 
-class SigninScreen extends StatelessWidget {
-  const SigninScreen({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SigninScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColors.blue100,
+                color: AppColors.appColor,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60),
@@ -102,7 +102,7 @@ class SigninScreen extends StatelessWidget {
                       },
                       child: CustomText(
                         text: 'Forgot Password?',
-                        txtColor: AppColors.blue100,
+                        txtColor: AppColors.appColor,
                         fontSize: 14,
                       ),
                     ),
@@ -113,7 +113,7 @@ class SigninScreen extends StatelessWidget {
                   CustomButton(
                     btnText: 'LOGIN',
                     ontap: () {},
-                    btnColor: AppColors.blue100,
+                    btnColor: AppColors.appColor,
                     txtColor: Colors.white,
                   ),
                   const CustomSizedBox(
@@ -136,7 +136,7 @@ class SigninScreen extends StatelessWidget {
                         },
                         child: CustomText(
                           text: "Register here",
-                          txtColor: AppColors.blue100,
+                          txtColor: AppColors.appColor,
                           fontSize: 15,
                         ),
                       ),

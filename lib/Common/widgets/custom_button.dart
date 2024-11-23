@@ -24,10 +24,11 @@ class CustomButton extends StatelessWidget {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color:
-              isOutlined ? Colors.transparent : (btnColor ?? AppColors.blue100),
+          color: isOutlined
+              ? Colors.transparent
+              : (btnColor ?? AppColors.appColor),
           border: isOutlined
-              ? Border.all(color: btnColor ?? AppColors.blue100, width: 1)
+              ? Border.all(color: btnColor ?? AppColors.appColor, width: 1)
               : null,
           borderRadius: BorderRadius.circular(200),
         ),
@@ -39,7 +40,7 @@ class CustomButton extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Poppins',
                 color: isOutlined
-                    ? (btnColor ?? AppColors.blue100)
+                    ? (btnColor ?? AppColors.appColor)
                     : (txtColor ?? AppColors.grey5),
                 fontSize: 16,
               ),

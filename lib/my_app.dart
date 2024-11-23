@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fix My Ride',
+      title: 'Urban Tropical Landscape',
       home: SplashScreen(),
     );
   }

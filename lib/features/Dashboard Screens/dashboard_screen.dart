@@ -14,10 +14,10 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AppColors.grey5),
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         elevation: 0,
         title: CustomText(
-          text: 'Fix My Ride',
+          text: 'Urban Tropical Landscape',
           txtColor: AppColors.grey5,
           fontSize: 20,
         ),

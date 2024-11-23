@@ -10,8 +10,9 @@ class NoBookingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         iconTheme: IconThemeData(color: AppColors.grey5),
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         elevation: 0,
         title: CustomText(
           text: 'My Bookings',

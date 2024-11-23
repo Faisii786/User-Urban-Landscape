@@ -19,7 +19,7 @@ class ServicesFullDetailsScreen extends StatelessWidget {
           Stack(
             children: [
               Image.network(
-                'https://th.bing.com/th/id/R.a394d6121d4751d622ddc6a17427c150?rik=oEGFSPKg7xaBoQ&pid=ImgRaw&r=0',
+                'https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg',
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -40,7 +40,7 @@ class ServicesFullDetailsScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomText(
-                        text: 'Brake Repair',
+                        text: 'Urban Gardening',
                         txtColor: Colors.black87,
                         fontSize: 18,
                         textAlign: TextAlign.start,
@@ -63,7 +63,7 @@ class ServicesFullDetailsScreen extends StatelessWidget {
                     height: 0.02,
                   ),
                   const CustomText(
-                    text: '700 \$',
+                    text: '500 \$',
                     txtColor: Colors.blue,
                     fontSize: 24,
                     textAlign: TextAlign.start,
@@ -73,14 +73,14 @@ class ServicesFullDetailsScreen extends StatelessWidget {
                   ),
                   const CustomText(
                     text:
-                        "It's time to inspect your car brakes which is the most important part in the car considering Safety.\n\nBook the service and let us check and repair your car brakes.\n\nParts not included.",
+                        "Transform your outdoor spaces into lush urban gardens with our expert gardening services.\n\nWe'll help you create a green oasis in your urban environment, improving air quality and aesthetics.\n\nPlants and materials are not included.",
                     txtColor: Colors.black87,
                     fontSize: 14,
                     textAlign: TextAlign.start,
                   ),
                   const Spacer(),
                   CustomButton(
-                    btnColor: AppColors.blue100,
+                    btnColor: AppColors.appColor,
                     txtColor: AppColors.grey5,
                     btnText: 'Book This Service',
                     ontap: () {

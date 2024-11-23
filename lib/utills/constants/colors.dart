@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // Blue combinations
-  static Color blue100 = const Color(0xff051DA0);
+  static Color appColor = const Color(0xff0c3a2d);
   static Color blue80 = const Color(0xff374AB3);
   static Color blue60 = const Color(0xff6977C6);
   static Color blue40 = const Color(0xff9BA5D9);

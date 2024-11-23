@@ -38,7 +38,7 @@ class PaymentSuccessScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
               CustomButton(
-                btnColor: AppColors.blue100,
+                btnColor: AppColors.appColor,
                 btnText: 'MY BOOKINGS',
                 txtColor: AppColors.grey5,
                 isOutlined: false,

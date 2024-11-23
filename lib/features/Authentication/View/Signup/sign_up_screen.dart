@@ -22,7 +22,7 @@ class SignupScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColors.blue100,
+                color: AppColors.appColor,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60),
@@ -103,7 +103,7 @@ class SignupScreen extends StatelessWidget {
                   CustomButton(
                     btnText: 'REGISTER',
                     ontap: () {},
-                    btnColor: AppColors.blue100,
+                    btnColor: AppColors.appColor,
                     txtColor: Colors.white,
                   ),
                   const CustomSizedBox(
@@ -122,11 +122,11 @@ class SignupScreen extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(() => const SigninScreen());
+                          Get.to(() => const SignInScreen());
                         },
                         child: CustomText(
                           text: "SIGNIN",
-                          txtColor: AppColors.blue100,
+                          txtColor: AppColors.appColor,
                           fontSize: 15,
                         ),
                       ),

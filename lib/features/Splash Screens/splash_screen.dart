@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:fix_my_ride/features/Authentication/View/Wellcome/wellcome_screen.dart';
 import 'package:fix_my_ride/utills/constants/colors.dart';
-import 'package:fix_my_ride/utills/constants/images.dart';
 import 'package:fix_my_ride/utills/constants/size_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,16 +29,17 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              CustomImages.appLogo,
-              width: 150,
-              height: 150,
-            ),
-            const CustomSizedBox(
-              height: 0.05,
-            ),
+            // Image.asset(
+            //   CustomImages.blueAppLogo,
+            //   width: 200,
+            //   height: 200,
+            // ),
+            // const CustomSizedBox(
+            //   height: 0.05,
+            // ),
             Text(
-              'Fix My Ride',
+              'Urban Tropical Landscape',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 36,
@@ -52,6 +53,13 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 80,
               color: Colors.blue,
             ),
+            const CustomSizedBox(
+              height: 0.1,
+            ),
+            const SpinKitChasingDots(
+              color: Colors.black,
+              size: 40,
+            )
           ],
         ),
       ),

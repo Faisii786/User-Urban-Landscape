@@ -10,7 +10,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.appColor,
         title: const CustomText(
           text: 'Chat',
           txtColor: Colors.white,
